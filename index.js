@@ -27,12 +27,12 @@ const myNetwork = new Network({
   output: outputLayer
 })
 
-const traineer = new Trainer(myNetwork)
+const trainer = new Trainer(myNetwork)
 trainer.train(trainingSet, {
   rate: .2,
   iterations: 20,
   error: .1,
   shuffle: true,
   log: 1,
-  const: Trainer.const.CROSS_ENTROPY
+  const: Trainer.cost.CROSS_ENTROPY
 })
